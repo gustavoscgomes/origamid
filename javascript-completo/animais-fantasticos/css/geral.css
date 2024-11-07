@@ -217,8 +217,11 @@ body {
   display: none;
 }
 
-.js [data-tab="content"] section.ativo.show-right {
+.js [data-tab="content"] section.ativo {
   display: block !important;
+}
+
+.js [data-tab="content"] section.ativo.show-right {
   animation: show-right 1s forwards;
 }
 
@@ -275,4 +278,19 @@ body {
 .js [data-anime="scroll"].ativo {
   opacity: 1;
   animation: show 600ms forwards;
+}
+
+[data-semana]::after {
+  display: inline-block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #E54;
+  border-radius: 50%;
+  margin-left: 4px;
+  border: 2px solid #000;
+}
+
+[data-semana].aberto::after {
+  background: #3F4;
 }
